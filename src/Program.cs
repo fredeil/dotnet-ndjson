@@ -6,7 +6,7 @@ using Console = Colorful.Console;
 using System.Drawing;
 using Newtonsoft.Json;
 
-namespace ndsjonrettyPrint
+namespace ndjson
 {
     [Command(ThrowOnUnexpectedArgument = false)]
     class Program
