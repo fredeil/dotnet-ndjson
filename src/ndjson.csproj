@@ -8,15 +8,24 @@
     <PackAsTool>true</PackAsTool>
     <PackageOutputPath>../nupkg</PackageOutputPath>
     <PackageId>ndjson</PackageId>
+    <UseFullSemVerForNuGet>false</UseFullSemVerForNuGet>
+    <Version>1.0.0</Version>
 
+    <Owners>Fredrik Eilertsen</Owners>
     <Authors>Fredrik Eilertsen</Authors>
     <RepositoryType>git</RepositoryType>
+    <NeutralLanguage>en</NeutralLanguage>
     <ToolCommandName>ndjson</ToolCommandName>
-    <RepositoryUrl>https://github.com/fredeil/dotnet-ndjson/</RepositoryUrl>
+    <Copyright>© Fredrik Eilertsen.</Copyright>
+    <Product>$(AssemblyName) ($(TargetFramework))</Product>
     <PackageTags>dotnetcore;dotnet;cli;tool;ndjson</PackageTags>
+    <RepositoryUrl>https://github.com/fredeil/dotnet-ndjson/</RepositoryUrl>
     <PackageProjectUrl>https://github.com/fredeil/dotnet-ndjson/</PackageProjectUrl>
+    <Summary>A dotnet cli tool for printing newline delimited json to the console</Summary>
     <Description>A dotnet cli tool for printing newline delimited json to the console</Description>
     <PackageLicenseUrl>https://github.com/fredeil/dotnet-ndjson/blob/master/LICENSE</PackageLicenseUrl>
+    <PackageIconUrl>https://raw.githubusercontent.com/ndjson/ndjson-spec/master/ndjson.png</PackageIconUrl>
+    <PackageReleaseNotes>See: https://github.com/fredeil/dotnet-ndjson/releases</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>
