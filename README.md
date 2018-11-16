@@ -22,3 +22,6 @@ Arguments:
 Options:
   -?|-h|--help            Show help information
 ```
+## License
+
+https://github.com/fredeil/dotnet-ndjson/blob/master/LICENSE
