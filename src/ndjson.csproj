@@ -7,11 +7,14 @@
     <IsPackable>true</IsPackable>
     <PackAsTool>true</PackAsTool>
     <PackageOutputPath>../nupkg</PackageOutputPath>
+    <PackageId>ndjson</PackageId>
 
     <Authors>Fredrik Eilertsen</Authors>
+    <RepositoryType>git</RepositoryType>
     <ToolCommandName>ndjson</ToolCommandName>
-    <ProjectUrl>https://github.com/fredeil/dotnet-ndjson/</ProjectUrl>
     <RepositoryUrl>https://github.com/fredeil/dotnet-ndjson/</RepositoryUrl>
+    <PackageTags>dotnetcore;dotnet;cli;tool;ndjson</PackageTags>
+    <PackageProjectUrl>https://github.com/fredeil/dotnet-ndjson/</PackageProjectUrl>
     <Description>A dotnet cli tool for printing newline delimited json to the console</Description>
     <PackageLicenseUrl>https://github.com/fredeil/dotnet-ndjson/blob/master/LICENSE</PackageLicenseUrl>
   </PropertyGroup>
