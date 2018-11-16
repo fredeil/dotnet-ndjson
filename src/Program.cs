@@ -2,8 +2,6 @@
 using System;
 using System.IO;
 using System.Threading.Tasks;
-using Console = Colorful.Console;
-using System.Drawing;
 using Newtonsoft.Json;
 
 namespace ndjson
@@ -35,7 +33,7 @@ namespace ndjson
                         if (++count >= 5)
                         {
                             if (!sr.EndOfStream)
-                                Console.WriteLine("--More--", Color.Yellow);
+                                Console.WriteLine("--More--");
 
                             Console.ReadKey();
                         }
