@@ -2,15 +2,15 @@
 using System;
 using System.IO;
 using System.Threading.Tasks;
+using Console = Colorful.Console;
+using System.Drawing;
+using Newtonsoft.Json;
 
 namespace ndsjonrettyPrint
 {
     [Command(ThrowOnUnexpectedArgument = false)]
     class Program
     {
-        [Option(Description = "Input is separated by newlines")]
-        public bool Newline { get; set; }
-
         public string[] RemainingArguments { get; }
 
         public static int Main(string[] args) => CommandLineApplication.Execute<Program>(args);
@@ -19,32 +19,49 @@ namespace ndsjonrettyPrint
         {
             try
             {
-                if (RemainingArguments == null)
+                if (RemainingArguments == null || RemainingArguments.Length == 0)
                     return;
 
-                foreach (var file in RemainingArguments)
+                using (var sr = new StreamReader(RemainingArguments[0]))
                 {
-                    using (var sr = new StreamReader(file))
+                    var count = 0;
+
+                    while (!sr.EndOfStream)
                     {
-                        if (Newline)
+                        var json = sr.ReadLine();
+                        var jobject = JsonConvert.DeserializeObject(json);
+                        Console.WriteLine(jobject.ToString());
+
+                        if (++count >= 5)
                         {
-                            while (!sr.EndOfStream)
-                            {
-                                Console.WriteLine(sr.ReadLine());
-                                Console.ReadKey();
-                            }
-                        }
-                        else
-                        {
-                            String line = sr.ReadToEnd();
-                            Console.WriteLine(line);
+                            if (!sr.EndOfStream)
+                                Console.WriteLine("--More--", Color.Yellow);
+
+                            Console.ReadKey();
                         }
                     }
                 }
             }
-            catch
+            catch (System.IO.FileNotFoundException)
             {
-                Console.WriteLine("The file could not be read.");
+                Console.WriteLine("Could not read file.");
+            }
+            catch (Newtonsoft.Json.JsonException)
+            {
+                try
+                {
+                    using (var sr = new StreamReader(RemainingArguments[0]))
+                    {
+                        var json = sr.ReadToEnd();
+                        var lenght = json.Length;
+                        var jsonPretty = JsonConvert.DeserializeObject(json).ToString();
+                        Console.WriteLine(jsonPretty);
+                    }
+                }
+                catch
+                {
+                    Console.WriteLine("Could not read file.");
+                }
             }
         }
     }
