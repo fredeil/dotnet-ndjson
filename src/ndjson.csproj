@@ -8,14 +8,13 @@
     <PackAsTool>true</PackAsTool>
     <ToolCommandName>ndjson</ToolCommandName>
     <AssemblyName>ndjson</AssemblyName>
-    <Description>A simple tool displaying JSON to the console</Description>
+    <Description>A dotnet cli tool for printing newline delimited json to the console</Description>
     <PackageOutputPath>../nupkg</PackageOutputPath>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="Colorful.Console" Version="1.2.9" />
     <PackageReference Include="McMaster.Extensions.CommandLineUtils" Version="2.2.4" />
-    <PackageReference Include="Humanizer.Core" Version="2.2.0" />
     <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
   </ItemGroup>
 
