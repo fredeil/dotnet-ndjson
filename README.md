@@ -1,6 +1,6 @@
 # dotnet-ndjson
 
-A simple .NET CLI tool for printing JSON to the console, it also handles [Newline Delimited JSON (NDJSON)](http://ndjson.org/).
+A simple dotnet CLI tool for printing [Newline Delimited JSON (NDJSON)](http://ndjson.org/) to console. It also handles normal JSON files too.
 
 ## Installation
 
