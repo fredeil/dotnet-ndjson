@@ -9,6 +9,7 @@
     <ToolCommandName>ndsjon</ToolCommandName>
     <AssemblyName>dotnet-ndsjon</AssemblyName>
     <Description>A simple tool displaying JSON to the console</Description>
+    <PackageOutputPath>../nupkg</PackageOutputPath>
   </PropertyGroup>
 
   <ItemGroup>

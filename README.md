@@ -21,6 +21,4 @@ Arguments:
 
 Options:
   -?|-h|--help            Show help information
-  -n|--newline            Flag for enabling newline separated json (default false)
-
 ```
