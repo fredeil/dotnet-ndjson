@@ -14,7 +14,7 @@ dotnet tool install --global dotnet-ndjson
 ## Usage
 
 ```
-Usage: dotnet ndjson [options] [arguments]
+Usage: ndjson [arguments]
 
 Arguments:
   path  Path to the file
