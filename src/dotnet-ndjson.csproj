@@ -6,14 +6,16 @@
 
     <IsPackable>true</IsPackable>
     <PackAsTool>true</PackAsTool>
-    <ToolCommandName>jsonp</ToolCommandName>
-    <AssemblyName>dotnet-jsonp</AssemblyName>
+    <ToolCommandName>ndsjon</ToolCommandName>
+    <AssemblyName>dotnet-ndsjon</AssemblyName>
     <Description>A simple tool displaying JSON to the console</Description>
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Colorful.Console" Version="1.2.9" />
     <PackageReference Include="McMaster.Extensions.CommandLineUtils" Version="2.2.4" />
     <PackageReference Include="Humanizer.Core" Version="2.2.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
   </ItemGroup>
 
 </Project>

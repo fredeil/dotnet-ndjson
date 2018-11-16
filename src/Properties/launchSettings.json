@@ -1,8 +1,0 @@
-{
-  "profiles": {
-    "dotnet-jsonp": {
-      "commandName": "Project",
-      "commandLineArgs": "--help"
-    }
-  }
-}

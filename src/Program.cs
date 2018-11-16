@@ -1,28 +1,50 @@
 ﻿using McMaster.Extensions.CommandLineUtils;
 using System;
+using System.IO;
 using System.Threading.Tasks;
 
-namespace JsonPrettyPrint
+namespace ndsjonrettyPrint
 {
+    [Command(ThrowOnUnexpectedArgument = false)]
     class Program
     {
-        // Return codes
-        public const int EXCEPTION = 2;
-        public const int ERROR = 1;
-        public const int OK = 0;
+        [Option(Description = "Input is separated by newlines")]
+        public bool Newline { get; set; }
 
-        public static async Task<int> Main(string[] args)
+        public string[] RemainingArguments { get; }
+
+        public static int Main(string[] args) => CommandLineApplication.Execute<Program>(args);
+
+        private void OnExecute()
         {
             try
             {
-                return 0;
+                if (RemainingArguments == null)
+                    return;
+
+                foreach (var file in RemainingArguments)
+                {
+                    using (var sr = new StreamReader(file))
+                    {
+                        if (Newline)
+                        {
+                            while (!sr.EndOfStream)
+                            {
+                                Console.WriteLine(sr.ReadLine());
+                                Console.ReadKey();
+                            }
+                        }
+                        else
+                        {
+                            String line = sr.ReadToEnd();
+                            Console.WriteLine(line);
+                        }
+                    }
+                }
             }
-            catch (Exception ex)
+            catch
             {
-                Console.ForegroundColor = ConsoleColor.Red;
-                Console.Error.WriteLine($"Unexpected error: {ex}");
-                Console.ResetColor();
-                return EXCEPTION;
+                Console.WriteLine("The file could not be read.");
             }
         }
     }
