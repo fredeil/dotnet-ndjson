@@ -8,12 +8,15 @@
     <PackAsTool>true</PackAsTool>
     <ToolCommandName>ndjson</ToolCommandName>
     <AssemblyName>ndjson</AssemblyName>
+    <PackageLicenseUrl>https://github.com/fredeil/dotnet-ndjson/blob/master/LICENSE</PackageLicenseUrl>
+    <RepositoryUrl>https://github.com/fredeil/dotnet-ndjson/</RepositoryUrl>
+    <ProjectUrl>https://github.com/fredeil/dotnet-ndjson/</ProjectUrl>
     <Description>A dotnet cli tool for printing newline delimited json to the console</Description>
+    <Summary>A dotnet cli tool for printing newline delimited json to the console</Summary>
     <PackageOutputPath>../nupkg</PackageOutputPath>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Colorful.Console" Version="1.2.9" />
     <PackageReference Include="McMaster.Extensions.CommandLineUtils" Version="2.2.4" />
     <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
   </ItemGroup>
