@@ -8,7 +8,7 @@ The latest release of dotnet-ndjson requires the [2.1.300](https://www.microsoft
 Once installed, run this command:
 
 ```
-dotnet tool install --global dotnet-ndjson
+dotnet tool install --global ndjson
 ```
 
 ## Usage
