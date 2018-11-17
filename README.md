@@ -1,4 +1,4 @@
-# dotnet-ndjson
+# dotnet-ndjson [![NuGet Badge](https://buildstats.info/nuget/ndjson)](https://www.nuget.org/packages/ndjson/)
 
 A simple dotnet CLI tool for printing [Newline Delimited JSON (NDJSON)](http://ndjson.org/) to console. It also handles normal JSON files too.
 
