@@ -22,6 +22,7 @@ Arguments:
 Options:
   -?|-h|--help            Show help information
 ```
-## License
+## Roadmap
 
-https://github.com/fredeil/dotnet-ndjson/blob/master/LICENSE
+- Better usage of colors
+- Better "-More-" feature
