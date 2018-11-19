@@ -25,16 +25,16 @@ Options:
 
 # Example
 
-ndjson text.ndjson
 ```json
 text.ndjson
 { "my" : "data" }
 { "more" : "data" }
 ```
 
-Prints to stdout:
+Print to stdout:
 
 ```bash
+$ ndjson text.ndjson
 {
   "my" : "data"
 }
