@@ -29,7 +29,7 @@ ndjson text.ndjson
 ```json
 text.ndjson
 { "my" : "data" }
-{ "more: "data" }
+{ "more" : "data" }
 ```
 
 Prints to stdout:
