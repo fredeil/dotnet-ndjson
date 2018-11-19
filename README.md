@@ -22,6 +22,29 @@ Arguments:
 Options:
   -?|-h|--help            Show help information
 ```
+
+# Example
+
+ndjson text.ndjson
+```json
+text.ndjson
+{ "my" : "data" }
+{ "more: "data" }
+```
+
+Prints to stdout:
+
+```bash
+{
+  "my" : "data"
+}
+{
+  "more" : "data"
+}
+```
+
+Simple as that!
+
 ## Roadmap
 
 - Better usage of colors
